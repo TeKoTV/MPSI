@@ -1,5 +1,5 @@
 t = float(input("Donnez votre taille :"))
-m = int(input("Donnez votre poids :"))
+m = int(input("Donnez votre masse :"))
 
 imc = m/(t**2)
 
