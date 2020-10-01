@@ -1,5 +1,5 @@
 def conversion(h,m,s):
-    return h * 3600 + m * 3600 + s
+    return h * 3600 + m * 60 + s
 
 def difference(s1, s2):
     return abs(s1 - s2)
