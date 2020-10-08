@@ -5,4 +5,4 @@ def reverseWord(w):
         # On ajoute les char au début du mot
     return finalWord
 
-print(reverseWord("Nathan"))
+print(reverseWord("Clemence"))
