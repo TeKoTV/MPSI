@@ -1,12 +1,5 @@
 n = eval(input("Donnez un nombre : "))
 
-def unite(n):
-    return n % 10
-
-def dizaine(n):
-    a = n // 10
-    return unite(a)
-
 def liste(n):
     
     l = []
