@@ -2,9 +2,9 @@
 
 Un nombre parfait est un nombre qui est égal à la somme de ses diviseurs (sauf lui même)
 
-""""
+"""""
 
-
+l = eval(input("Entrez une limite l : "))
 
 # On créé la fonction nombre parfait (Ici on l'appelle "parf")
 def parf(n):
@@ -24,10 +24,16 @@ def parf(n):
     # Si la somme des diviseurs de n est égale à n, on affiche que n est un nombre parfait (ou pas, si il ne l'est pas)        
     if (s == n):
         print(n, " est un nombre parfait")
-    else:
-        print(n, " n'est pas un nombre parfait")
+    #else:
+    #    print(n, " n'est pas un nombre parfait")
 
-# On exécute la fonction pour tester
+# Fonction qui cherche les nombres parfaits de 6 à L (demandé)
+def countNb(l):
 
-parf(6)
-parf(8)
+    # On boucle de 6 (premier nombre parfait) à L, limite demandée
+    for k in range (6, l+1):
+
+        # On execute la fonction parfait pour k (k allant de 6 à l)
+        parf(k)
+
+countNb(l)
