@@ -8,7 +8,6 @@ def liste(n):
         l.append(n % 10)
         n = n // 10
 
-    print(l[::-1])
-    
+    print(l)
 
 liste(n)
