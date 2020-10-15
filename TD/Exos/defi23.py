@@ -4,27 +4,25 @@ def unites(u):
 def dizaine(d):
     return unites(d // 10)
 
-# n : ab et p : parent
-
 ValidNumbers = []
 
-b = 0
-a = 0
+def check(p, a, b):
+    if unites(p) == b:
+        prima = 0
+        newP = str(p)[::-1][1:]
+        for char in newP:
+            if int(char) == 0:
+                return
+            prima += int(char)
 
-def init(n):
+        if prima == a:
+            ValidNumbers.append(p)
+
+def parent(n):
     b = unites(n)
     a = dizaine(n)
+    for i in range (0, 10**(a+1)):
+        check(i, a, b)
+    print(ValidNumbers)
 
-def check(p):
-    if (unites(p) == b):
-        ValidNumbers.append(p)
-    prima = 0
-    newP = str(p)[1:]
-    for char in newP:
-        prima += int(char)
-
-    print (prima)
-    
-
-init(31)
-check(121)
+parent(31)
